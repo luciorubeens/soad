@@ -1,0 +1,201 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: whitesmoke;
+	height: 100%;
+}
+
+body.login {
+	background: url("../images/bg.jpg");
+}
+
+/*==============================
+=            HEADER            =
+==============================*/
+
+#menu-topo {
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+	margin: 0;
+	padding: 0!important;
+	border-radius: 0;
+}
+
+#menu-topo span.nome {
+	font-weight: 600;
+	color: #128D75;
+	font-size: 13pt;
+	position: relative;
+	top: -0.5rem;
+}
+
+#menu-topo span.tipo {
+	font-weight: 300;
+	display: block;
+	position: relative;
+	left:2.8em;
+	top: -0.3rem;
+}
+
+#menu-topo .item {
+	height: 60px;
+	line-height: 0;
+}
+
+/*=============================
+=            CORPO            =
+=============================*/
+
+.wrap {
+	padding-top: 60px!important;
+}
+
+/*====================================
+=            MENU LATERAL            =
+====================================*/
+
+#menu-lateral {
+    height:100%;
+    position:absolute;
+	background: #17AE91; 
+	margin:0;
+	padding: 0;
+}
+
+#menu-lateral ul {
+	list-style: none;
+	display: block;
+	width: 100%;
+}
+
+#menu-lateral ul li {
+	text-align: center;
+	display: block;
+	height: 60px;
+	border-bottom: 1px solid #14967C;
+}
+
+#menu-lateral ul li a {
+	display: block;
+	text-decoration: none;
+	color: #062F26;
+	line-height: 60px;
+	height: 60px;
+	width: 100%;
+}
+
+#menu-lateral ul li a i {
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);
+}
+
+li.ativo {
+	background: #128D75;
+}
+li.ativo > a {
+	color:white!important;
+}
+li.ativo > a > i {
+	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.7)!important;
+}
+
+/*=============================================
+=            CONTEUDO DA APLICAÇÃO            =
+=============================================*/
+
+#principal {
+	position: absolute;
+	width: 93.8%;
+	right: 0;
+	margin: 0;
+	height: 100%;
+	z-index: 3;
+	-webkit-box-shadow: -1px 0px 4px rgba(50, 50, 50, 0.4);
+	-moz-box-shadow:    -1px 0px 4px rgba(50, 50, 50, 0.4);
+	box-shadow:         -1px 0px 4px rgba(50, 50, 50, :;);
+}
+
+#principal .content {
+	margin:1em;
+}
+
+#principal .content > .title {
+	font-size: 20pt;
+	font-weight: 300;
+	margin-left: 0.5em;
+}
+
+#agregador {
+	box-shadow: none;
+
+}
+
+#agregador > .row {
+	box-shadow: none;
+}
+
+/*==============================
+=            PAINEL            =
+==============================*/
+
+.box {
+	box-shadow: none!important;
+}
+
+.box-btn {
+	cursor: pointer;
+}
+
+.box-content {
+	text-align: center;
+	margin:1.5em 0 1em 0;
+	color:#222;
+}
+
+.box-content .numero {
+	font-weight: 500;
+	font-size: 40pt;
+}
+
+.box-title {
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #128B73;
+	font-size: 11pt;
+}
+
+.box-0 {
+	min-height: 160px;
+}
+.box-1 {
+	min-height: 72px;
+}
+
+.painel-login {
+	margin: 10em auto;
+	min-height: 200px;
+	width: 25em;
+	padding: 0;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: rgba(255,255,255,0.7);
+	box-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 5px 0px;
+	color: rgb(34, 34, 34);
+}
+
+/*===================================
+=            ESPECIFICOS            =
+===================================*/
+
+.button {
+	color:#555!important;
+}
+#btn-avaliar {
+	margin-top: 1em
+}
