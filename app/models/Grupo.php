@@ -6,4 +6,5 @@ class Grupo extends Eloquent
 	protected $fillable = array('*');
 	public $timestamps = false;
 
+
 }

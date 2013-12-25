@@ -11,9 +11,12 @@
 	<div class="ui menu" id="menu-topo">
 			<div class="right menu" style="height:100%">
 			<div class="item">
-				<img class="ui avatar image" src="http://semantic-ui.com/images/demo/photo2.jpg">	
-				<span class="nome">{{ $nome }}</span>
-				<span class="tipo">{{ $tipo }}</span>
+				<img class="ui avatar image" src="http://semantic-ui.com/images/demo/photo2.jpg">
+				<?php $sessao = Session::get("user") ?>
+				{{-- exibe apenas o primeiro nome do usuário --}}
+				<span class="nome">{{ explode(" ", $sessao->nome, 2)[0]; }}</span>
+
+				<span class="tipo">{{ ucfirst(Request::segment(1)); }}</span>
 			</div>
 			<a href="" class="item" style="width:80px"><i class="search icon large"></i></a>
 			<a href="" class="item"><i class="off icon large"></i></a>
@@ -35,7 +38,7 @@
 
 		<div class="wide column" id="principal">
 			<div class="content">
-				<div class="title">{{ $pagina }}</div>
+				<div class="title">{{ ucfirst(Request::segment(2)); }}</div>
 				@yield('content')
 			</div>
 		</div>

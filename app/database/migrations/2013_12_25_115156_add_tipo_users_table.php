@@ -11,7 +11,10 @@ class AddTipoUsersTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::table('users', function($table)
+		{
+			$table->integer('tipo');
+		});
 	}
 
 	/**
