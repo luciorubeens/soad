@@ -8,14 +8,14 @@ class GrupoTableSeeder extends Seeder
 
 		$grupos = array(
 			array(
-				'turma_id'=>5,
-				'disciplina_id'=>4,
-				'professor_id'=>7,
+				'turma_id'=>6,
+				'disciplina_id'=>5,
+				'professor_id'=>8,
 			),
 			array(
-				'turma_id'=>5,
-				'disciplina_id'=>7,
-				'professor_id'=>6,
+				'turma_id'=>6,
+				'disciplina_id'=>8,
+				'professor_id'=>7,
 			)
 		);
 

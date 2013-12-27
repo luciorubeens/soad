@@ -9,47 +9,47 @@ class TurmaTableSeeder extends Seeder
 		$turmas = array(
 			array(
 				'turno'=>'M',
-				'curso_id'=>0
+				'curso_id'=>1
 			),
 			array(
 				'turno'=>'M',
-				'curso_id'=>1
-			),
-			array(
-				'turno'=>'T',
-				'curso_id'=>1
+				'curso_id'=>2
 			),
 			array(
 				'turno'=>'T',
 				'curso_id'=>2
 			),
 			array(
-				'turno'=>'N',
+				'turno'=>'T',
 				'curso_id'=>3
 			),
 			array(
-				'turno'=>'M',
+				'turno'=>'N',
 				'curso_id'=>4
 			),
 			array(
-				'turno'=>'N',
-				'curso_id'=>4
+				'turno'=>'M',
+				'curso_id'=>5
 			),
 			array(
 				'turno'=>'N',
 				'curso_id'=>5
 			),
 			array(
-				'turno'=>'M',
+				'turno'=>'N',
 				'curso_id'=>6
+			),
+			array(
+				'turno'=>'M',
+				'curso_id'=>7
 			),
 			array(
 				'turno'=>'T',
-				'curso_id'=>6
+				'curso_id'=>7
 			),
 			array(
 				'turno'=>'N',
-				'curso_id'=>7
+				'curso_id'=>8
 			),
 		);
 
