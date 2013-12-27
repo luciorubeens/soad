@@ -4,22 +4,24 @@
 	<meta charset="UTF-8">
 	<title>SOAD</title>
 	<link rel="stylesheet" type="text/css" href="{{ asset('/css/semantic.min.css') }} " />
+	<link rel="stylesheet" type="text/css" href="{{ asset('/css/entypo.css') }} " />
 	<link rel="stylesheet" type="text/css" href="{{ asset('/css/estilo.css')}} " />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="ui menu" id="menu-topo">
+	<div class="ui inverted menu" id="menu-topo">
 			<div class="right menu" style="height:100%">
 			<div class="item">
 				<img class="ui avatar image" src="http://semantic-ui.com/images/demo/photo2.jpg">
 				<?php $sessao = Session::get("user") ?>
+
 				{{-- exibe apenas o primeiro nome do usuário --}}
-				<span class="nome">{{ explode(" ", $sessao->nome, 2)[0]; }}</span>
+				<span class="nome">{{ $sessao->nome; }}</span>
 
 				<span class="tipo">{{ ucfirst(Request::segment(1)); }}</span>
 			</div>
 			<a href="" class="item" style="width:80px"><i class="search icon large"></i></a>
-			<a href="" class="item"><i class="off icon large"></i></a>
+			<a href="{{ URL::to('user/logout') }}" class="item"><i class="off icon large"></i></a>
 		</div>
 	</div>
 
@@ -38,7 +40,7 @@
 
 		<div class="wide column" id="principal">
 			<div class="content">
-				<div class="title">{{ ucfirst(Request::segment(2)); }}</div>
+				<div class="title">{{ $pagina }}</div>
 				@yield('content')
 			</div>
 		</div>

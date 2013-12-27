@@ -11,9 +11,10 @@ class UserController extends BaseController
 		return View::make('login');
 	}
 
-	public function getDashboard()
+	public function getLogout()
 	{
-		return "oie";
+		Auth::logout();
+		return Redirect::to('user');
 	}
 
 	public function postSignin()
@@ -29,19 +30,15 @@ class UserController extends BaseController
 			$tipo = Auth::user()->tipo;
 			
 			if ($tipo==0) { // aluno
-				$aluno = Aluno::where('email','=',Auth::user()->username)->get()[0]; // captura as informações do aluno
-
-				Session::put("user", $aluno); // armazena na sessão
-
-		   		return Redirect::route('aluno');
+		   		return Redirect::to('aluno');
 			} else if ($tipo==1) { // professor
-				return Redirect::to('professor/index')->with('email', $email);
+				return Redirect::to('professor');
 			} else if ($tipo==2) {
-				return Redirect::to('coordenador/index')->with('email', $email);
+				return Redirect::to('coordenador');
 			}
 
 		} else {
-		   return Redirect::to('user/index')
+		   return Redirect::to('user')
 		      ->with('message', 'Your username/password combination was incorrect')
 		      ->withInput();
 		}

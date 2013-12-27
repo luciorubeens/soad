@@ -14,25 +14,8 @@
 Route::controller('user','UserController');
 
 
-/*====================================
-=            SESSÃO ALUNO            =
-====================================*/
-
-Route::group(array('as'=>'aluno', 'prefix' => 'aluno', 'before' => 'auth'), function()
-{
-	// (redireciona para o dashboard) 
-	Route::get('/', function()
-	{
-		return Redirect::to('aluno/dashboard');
-	});
-
-	// página principal - aluno/dashboard - (app/views/aluno/dashboard.blade.php)
-	Route::get('dashboard', function()
-	{
-		return View::make('aluno.dashboard');
-	});
-
-});
+Route::controller('aluno','AlunoController');
+Route::controller('coordenador','CoordenadorController');
 
 
 Route::get('/', 'UserController@getIndex');

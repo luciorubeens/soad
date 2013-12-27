@@ -12,9 +12,9 @@
     					<div class="text">Selecione o professor:</div>
     					<i class="dropdown icon"></i>
     					<div class="menu">
-    						<div class="item">André</div>
-    						<div class="item">Virginia</div>
-    						<div class="item">Wesley</div>
+    						@foreach ($professores as $prof)
+    							<div class="item">{{ $prof->nome }}</div>
+    						@endforeach
     					</div>
     				</div>
     				<div class="fluid ui small button" id="btn-avaliar">Avaliar</div>
