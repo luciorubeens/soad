@@ -3,6 +3,7 @@
 @section('content')
 <div class="ui grid" id="agregador">
 	<div class="four wide column box" id="painel-abrir-avaliacao">
+
 		<div class="ui stacked segment">
 
 			<a class="ui right red corner label">
@@ -66,23 +67,42 @@
 	</div>
 
 	<div class="twelve wide column box" id="avaliacoes-criadas">
-		<ul class="cbp_tmtimeline">
-			@foreach ($avaliacoes as $avaliacao)
-		    <li>
-		        <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>{{$avaliacao["criada"]}}</span></time>
+		<div class="box-header">Avaliações Criadas</div>
+		<div class="box-content">
+			
+			<div class="ui items">
+				@foreach ($avaliacoes as $avaliacao)
+					<div class="item">
+						<div class="content">
+							<div class="meta popup" data-content="" data-variation="" data-position="bottom center">
+								<a class="ui 
+								@if ($avaliacao['status']=='aberta') 
+									{{'green'}} 
+								@elseif ($avaliacao['status']=='pendente') 
+									{{'orange'}}
+								@elseif ($avaliacao['status']=='cancelada')
+									{{'red'}}
+								@endif
+								label">{{$avaliacao['status']}}</a>
+							</div>
+							<div class="name">{{$avaliacao['curso']}}</div>
+							<div class="description">
+								<p>Módulo {{$avaliacao['modulo']}}</p>
+								<p>Turno: {{$avaliacao['turno']}}</p>
+								<p>Início: {{$avaliacao['inicio']}} </p>
+								<p>Término: {{$avaliacao['fim']}} </p>
+							</div>
+						</div>
+						<div class="ui bottom attached label center">
+							<a href="#" class="popup" data-content="Editar" data-variation="small" data-position="bottom center"><i class="circular pencil icon large"></i></a>
+							<a href="#" class="popup" data-content="Visualizar" data-variation="small" avaliações" data-position="bottom center"><i class="circular comment icon large"></i></a>
+						</div>		
+					</div>
+				@endforeach
+			</div>
 
-		        @if ($avaliacao["status"]=="aberto")
-		        <div class="cbp_tmicon icon-clock aberto"></div>
-		        @endif
+		</div>
+	</div>		
 
-		        <div class="cbp_tmlabel">
-			            <h4>{{$avaliacao["curso"]}}</h4>
-			            <p>Módulo: {{$avaliacao["modulo"]}}</p>
-			            <p>Turno: {{$avaliacao["turno"]}}</p>
-		        </div>
-		    </li>
-		    @endforeach
-		</ul>
-	</div>
 </div>
 @stop

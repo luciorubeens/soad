@@ -18,43 +18,33 @@ body.login {
 ==============================*/
 
 #menu-topo {
-	background: #011C26;
-	position: fixed;
+	background: #183f40;
+	position: relative;
 	width: 100%;
-	z-index: 9999;
 	margin: 0;
-	padding: 0!important;
 	border-radius: 0;
-}
-
-#menu-topo span.nome {
-	font-weight: 600;
-	color: #128D75;
-	font-size: 13pt;
-	position: relative;
-	top: -0.5rem;
-}
-
-#menu-topo span.tipo {
-	font-weight: 300;
-	display: block;
-	position: relative;
-	left:2.8em;
-	top: -0.3rem;
+	height: 60px;
+	-webkit-box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.4);
+	-moz-box-shadow:    0px 2px 2px 0px rgba(50, 50, 50, 0.4);
+	box-shadow:         0px 2px 2px 0px rgba(50, 50, 50, 0.4);
 }
 
 #menu-topo .item {
-	height: 60px;
-	line-height: 0;
+	line-height: 60px!important;
+	padding: 0;
+	text-align: center;
+	min-width: 80px;
 }
 
+#menu-topo .title {
+	font-size: 21pt;
+	font-weight: 300;
+	padding:0 1em;
+}
+	
 /*=============================
 =            CORPO            =
 =============================*/
-
-.wrap {
-	padding-top: 60px!important;
-}
 
 /*====================================
 =            MENU LATERAL            =
@@ -138,21 +128,17 @@ a.ativo > i, #menu-lateral > ul > li > a:hover > i {
 =============================================*/
 
 #principal {
-	position: absolute;
+	position: relative;
 	width: 84%;
+	padding: 0;
 	right: 0;
 	margin: 0;
+	margin-left: 16%;
 	height: 100%;
 }
 
 #principal > .content {
-	margin:1em;
-}
-
-#principal > .content > .title {
-	font-size: 20pt;
-	font-weight: 300;
-	margin-left: 0.5em;
+	margin:1em 1.5em;
 }
 
 #agregador {
@@ -192,6 +178,11 @@ a.ativo > i, #menu-lateral > ul > li > a:hover > i {
 	font-weight: 700;
 	color: #128B73;
 	font-size: 11pt;
+}
+
+.box-header {
+	font-size: 18pt;
+	font-weight: 300;
 }
 
 .box-0 {
@@ -278,16 +269,8 @@ a.ativo > i, #menu-lateral > ul > li > a:hover > i {
 	background-color: rgb(44, 62, 80);
 }
 
-.show {
-	display: block;
-}
-
-.hide {
-	display: none;
-}
-
-.or {
-	content: 'ou'!important;
+.center {
+	text-align: center;
 }
 /*===================================
 =            Coordenador            =
@@ -303,155 +286,30 @@ a.ativo > i, #menu-lateral > ul > li > a:hover > i {
 }
 
 #avaliacoes-criadas .item {
-	-webkit-transition: background-color 0.05s ease-out;
-	-moz-transition: background-color 0.05s ease-out;
-	-o-transition: background-color 0.05s ease-out;
-	transition: background-color 0.05s ease-out;
-	min-height: 100px!important;
+	min-height: 150px!important;
+	text-align: left;
+	-webkit-transition: padding .2s ease;
+	transition: padding .4s ease;
 }
 
-/*============================================================================================
-=	 VERTICAL TIME LINE (ADAPTADO DE: http://tympanus.net/Blueprints/VerticalTimeline/)      =
-=============================================================================================*/
-
-.cbp_tmtimeline {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    position: relative;
-} 
- 
-/* The line */
-.cbp_tmtimeline:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: #ddd;
-
-    left: 57.4%;
-    margin-left: -10px;
+#avaliacoes-criadas .description {
+	margin-top: 2em; 
+	color:#666;
 }
- 
-.cbp_tmtimeline > li {
-    position: relative;
-}
- 
-/* The date/time */
-.cbp_tmtimeline > li .cbp_tmtime {
-    display: block;
-    padding: 0.3em 1em;	
-    top:2.5em;
-    border-radius: 3px;
-    position: absolute;
-}
- 
-.cbp_tmtimeline > li .cbp_tmtime span {
-    display: block;
-    text-align: center;
-    font-size: 12pt;
-    color: #666;
-}
- 
-/* The triangle */
-.cbp_tmtimeline > li .cbp_tmlabel:after {
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-width: 10px;
-    top: 10px;
+#avaliacoes-criadas .item:hover {
+	border-bottom-color: #aaa!important;
+	padding-bottom: 60px;
 }
 
-/* === Right content === */
-.cbp_tmtimeline > li:nth-child(odd) > .cbp_tmlabel {
-	margin: 0 0 15px 63%;
+#avaliacoes-criadas .item:hover .attached {
+	display: block;
 }
 
-/* Triangle */
-.cbp_tmtimeline > li:nth-child(odd) > .cbp_tmlabel:after {
-    right: 100%;
-    border-right-color: white;
+#avaliacoes-criadas .attached {
+	display: none;
 }
 
-/* Date */
-.cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime {
-	left: 40%;
-}
-
-/* === Left content === */
-.cbp_tmtimeline > li:nth-child(even) > .cbp_tmlabel {
-	margin: 0 63% 15px 0;
-    left:5em;
-}
-
-/* Tringle */
-.cbp_tmtimeline > li:nth-child(even) > .cbp_tmlabel:after {
-    left: 100%;
-    border-left-color: white;
-}
-
-/* Date */
-.cbp_tmtimeline > li:nth-child(even) .cbp_tmtime {
-	left: 57%;
-}
-
-.cbp_tmtimeline > li .cbp_tmlabel {
-    background: white;
-    color: #222;
-    padding: 1em;
-    font-size: 14pt;
-    font-weight: 300;
-    line-height: 1.4;
-    position: relative;
-    border-radius: 5px;
-    border:1px solid #ddd;
-    -webkit-box-shadow: 0 1px 2px 1px rgba(0,0,0,.1);
-    box-shadow: 0 1px 2px 1px rgba(0,0,0,.1);
-}
- 
-.cbp_tmtimeline > li .cbp_tmlabel h2 { 
-    margin-top: 0px;
-    padding: 0 0 10px 0;
-}
- 
-/* The icons */
-.cbp_tmtimeline > li .cbp_tmicon {
-    width: 40px;
-    height: 40px;
-    font-family: 'Simple-Line-Icons';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    font-size: 24pt;
-    line-height: 40px;
-    -webkit-font-smoothing: antialiased;
-    position: absolute;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    left: 37%;
-    top: 0;
-    margin: 0 0 0 123px;
-    cursor: pointer;
-}
-
-/* Completado */
-.cbp_tmtimeline > li .cbp_tmicon.icon-check {
-	background: #2ecc71;
-}
-
-/* Pendente */
-.cbp_tmtimeline > li .cbp_tmicon.icon-clock {
-	background: #e67e22;
-}
-
-/* Encerrado */
-.cbp_tmtimeline > li .cbp_tmicon.icon-close {
-	background: #c0392b;
+#avaliacoes-criadas .attached a {
+	text-decoration: none;
+	color:#222;
 }

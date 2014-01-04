@@ -1,5 +1,7 @@
 <?php 
 
+use Carbon\Carbon;
+
 class CoordenadorController extends BaseController
 {
 	private $id;
@@ -32,12 +34,11 @@ class CoordenadorController extends BaseController
 	// Página de criação e visualização das avaliações (coordenador/avaliacao)
 	public function getAvaliacao()
 	{
-		$data = array(
-			"pagina"=>"Avaliações",
-			"cursos"=>Coordenador::find($this->id)->cursos,
-			"avaliacoes"=>$this->getAvaliacoesCriadas()
-		);
-		return View::make('coordenador.avaliacao',$data);
+		$avaliacoes = $this->getAvaliacoesCriadas();
+		$cursos = Coordenador::find($this->id)->cursos;
+		$pagina= "Avaliações";
+
+		return View::make('coordenador.avaliacao',compact('avaliacoes','cursos','pagina'));
 	}
 
 	/**
@@ -73,8 +74,8 @@ class CoordenadorController extends BaseController
 						"modulo"=>$avaliacao->modulo,
 						"inicio"=>$avaliacao->inicio,
 						"fim"=>$avaliacao->fim,
-						"criada"=>\Carbon\Carbon::createFromTimeStamp(strtotime($avaliacao->created_at))->diffForHumans(),
-						"status"=>"aberto"
+						"criada"=>Carbon::createFromTimeStamp(strtotime($avaliacao->created_at))->diffForHumans(),
+						"status"=>"aberta"
 					);
 				}
 			}
