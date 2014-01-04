@@ -5,9 +5,9 @@
 	<div class="four wide column box" id="painel-abrir-avaliacao">
 		<div class="ui stacked segment">
 
-			<div class="ui right red corner label">
+			<a class="ui right red corner label">
 			    <i class="question icon"></i>
-		  	</div> <!-- / icone de ajuda -->
+		  	</a> <!-- / icone de ajuda -->
 
 			<div class="formulario-abrir-avaliacao">
 				<div class="content">
@@ -65,10 +65,24 @@
 		</div>
 	</div>
 
-	<div class="twelve wide column box">
-		<div class="ui stacked segment">
-			ad
-		</div>
+	<div class="twelve wide column box" id="avaliacoes-criadas">
+		<ul class="cbp_tmtimeline">
+			@foreach ($avaliacoes as $avaliacao)
+		    <li>
+		        <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>{{$avaliacao["criada"]}}</span></time>
+
+		        @if ($avaliacao["status"]=="aberto")
+		        <div class="cbp_tmicon icon-clock aberto"></div>
+		        @endif
+
+		        <div class="cbp_tmlabel">
+			            <h4>{{$avaliacao["curso"]}}</h4>
+			            <p>Módulo: {{$avaliacao["modulo"]}}</p>
+			            <p>Turno: {{$avaliacao["turno"]}}</p>
+		        </div>
+		    </li>
+		    @endforeach
+		</ul>
 	</div>
 </div>
 @stop

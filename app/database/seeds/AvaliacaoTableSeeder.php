@@ -10,8 +10,8 @@ class AvaliacaoTableSeeder extends Seeder
 			array(
 				'modulo'=>2,
 				'inicio'=> '2013-11-01',
-				'fim'=> '2013-11-31',
-				'turma_id'=> 5,
+				'fim'=> '2013-12-31',
+				'turma_id'=> 6,
 				'created_at'=> new DateTime,
 				'updated_at'=> new DateTime
 			)

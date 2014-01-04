@@ -1,5 +1,5 @@
 * {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', 'Ubuntu', sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -62,10 +62,34 @@ body.login {
 
 #menu-lateral {
     height:100%;
-    position:absolute;
+    width:16%;
+    position:fixed;
 	background: #518C7C; 
 	margin:0;
 	padding: 0;
+}
+
+#menu-lateral > .profile {
+	display: block;
+	margin:1em 0;
+	text-align: center;
+}
+
+#menu-lateral > .profile > img {
+	margin:1em auto;
+}
+
+#menu-lateral > .profile > span {
+	display: block;
+}
+
+#menu-lateral > .profile > .nome {
+	font-size: 16pt;
+	color:white;
+}
+
+#menu-lateral > .profile > .tipo {
+	color: #222
 }
 
 #menu-lateral ul {
@@ -75,33 +99,38 @@ body.login {
 }
 
 #menu-lateral ul li {
-	text-align: center;
 	display: block;
 	height: 60px;
-	border-bottom: 1px solid #46796B;
 }
 
-#menu-lateral ul li a {
+#menu-lateral > ul > li > a {
 	display: block;
 	text-decoration: none;
-	color: #062F26;
+	font-size: 14pt!important;
+	text-transform: uppercase;
+	color: #1B4036;
 	line-height: 60px;
-	height: 60px;
-	width: 100%;
+	padding: 0 1em;
+	border-left: 3px solid #266251;
 }
 
 #menu-lateral ul li a i {
-	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);
+	font-size: 18pt;
+	position: relative;
+	top:0.1em;
+	margin-right: 0.7em;
+
 }
 
-li.ativo {
+a.ativo, #menu-lateral > ul > li > a:hover {
 	background: #417063;
+	border-left:3px solid #011C26!important;
 }
-li.ativo > a {
+a.ativo, #menu-lateral > ul > li > a:hover{
 	color:white!important;
 }
-li.ativo > a > i {
-	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.7)!important;
+a.ativo > i, #menu-lateral > ul > li > a:hover > i {
+	color: #011C26;
 }
 
 /*=============================================
@@ -110,14 +139,10 @@ li.ativo > a > i {
 
 #principal {
 	position: absolute;
-	width: 93.8%;
+	width: 84%;
 	right: 0;
 	margin: 0;
 	height: 100%;
-	z-index: 3;
-	-webkit-box-shadow: -1px 0px 4px rgba(50, 50, 50, 0.4);
-	-moz-box-shadow:    -1px 0px 4px rgba(50, 50, 50, 0.4);
-	box-shadow:         -1px 0px 4px rgba(50, 50, 50, :;);
 }
 
 #principal > .content {
@@ -275,4 +300,158 @@ li.ativo > a > i {
 .field > label {
 	font-weight: 600;
 	margin-bottom: 0.5em!important;
+}
+
+#avaliacoes-criadas .item {
+	-webkit-transition: background-color 0.05s ease-out;
+	-moz-transition: background-color 0.05s ease-out;
+	-o-transition: background-color 0.05s ease-out;
+	transition: background-color 0.05s ease-out;
+	min-height: 100px!important;
+}
+
+/*============================================================================================
+=	 VERTICAL TIME LINE (ADAPTADO DE: http://tympanus.net/Blueprints/VerticalTimeline/)      =
+=============================================================================================*/
+
+.cbp_tmtimeline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+} 
+ 
+/* The line */
+.cbp_tmtimeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #ddd;
+
+    left: 57.4%;
+    margin-left: -10px;
+}
+ 
+.cbp_tmtimeline > li {
+    position: relative;
+}
+ 
+/* The date/time */
+.cbp_tmtimeline > li .cbp_tmtime {
+    display: block;
+    padding: 0.3em 1em;	
+    top:2.5em;
+    border-radius: 3px;
+    position: absolute;
+}
+ 
+.cbp_tmtimeline > li .cbp_tmtime span {
+    display: block;
+    text-align: center;
+    font-size: 12pt;
+    color: #666;
+}
+ 
+/* The triangle */
+.cbp_tmtimeline > li .cbp_tmlabel:after {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-width: 10px;
+    top: 10px;
+}
+
+/* === Right content === */
+.cbp_tmtimeline > li:nth-child(odd) > .cbp_tmlabel {
+	margin: 0 0 15px 63%;
+}
+
+/* Triangle */
+.cbp_tmtimeline > li:nth-child(odd) > .cbp_tmlabel:after {
+    right: 100%;
+    border-right-color: white;
+}
+
+/* Date */
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime {
+	left: 40%;
+}
+
+/* === Left content === */
+.cbp_tmtimeline > li:nth-child(even) > .cbp_tmlabel {
+	margin: 0 63% 15px 0;
+    left:5em;
+}
+
+/* Tringle */
+.cbp_tmtimeline > li:nth-child(even) > .cbp_tmlabel:after {
+    left: 100%;
+    border-left-color: white;
+}
+
+/* Date */
+.cbp_tmtimeline > li:nth-child(even) .cbp_tmtime {
+	left: 57%;
+}
+
+.cbp_tmtimeline > li .cbp_tmlabel {
+    background: white;
+    color: #222;
+    padding: 1em;
+    font-size: 14pt;
+    font-weight: 300;
+    line-height: 1.4;
+    position: relative;
+    border-radius: 5px;
+    border:1px solid #ddd;
+    -webkit-box-shadow: 0 1px 2px 1px rgba(0,0,0,.1);
+    box-shadow: 0 1px 2px 1px rgba(0,0,0,.1);
+}
+ 
+.cbp_tmtimeline > li .cbp_tmlabel h2 { 
+    margin-top: 0px;
+    padding: 0 0 10px 0;
+}
+ 
+/* The icons */
+.cbp_tmtimeline > li .cbp_tmicon {
+    width: 40px;
+    height: 40px;
+    font-family: 'Simple-Line-Icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-size: 24pt;
+    line-height: 40px;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    left: 37%;
+    top: 0;
+    margin: 0 0 0 123px;
+    cursor: pointer;
+}
+
+/* Completado */
+.cbp_tmtimeline > li .cbp_tmicon.icon-check {
+	background: #2ecc71;
+}
+
+/* Pendente */
+.cbp_tmtimeline > li .cbp_tmicon.icon-clock {
+	background: #e67e22;
+}
+
+/* Encerrado */
+.cbp_tmtimeline > li .cbp_tmicon.icon-close {
+	background: #c0392b;
 }

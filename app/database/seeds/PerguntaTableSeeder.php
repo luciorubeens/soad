@@ -10,7 +10,7 @@ class PerguntaTableSeeder extends Seeder
 			array(
 				'pergunta'=>"O que você acha do atual método de ensino?",
 				'timestamp'=>new DateTime
-			);
+			)
 		);
 
 		DB::table('pergunta')->insert($perguntas);

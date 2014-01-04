@@ -9,9 +9,9 @@ class PerguntaCadastradaTableSeeder extends Seeder
 		$perguntas = array(
 			array(
 				'pergunta'=>'Como você avalia o atua processo de avaliação de docentes?',
-				'timestamp' = new DateTime,
-				'avaliacao_id'=1
-			);
+				'timestamp' => new DateTime,
+				'avaliacao_id'=>1
+			)
 		);
 
 		DB::table('perguntacadastrada')->insert($perguntas);
