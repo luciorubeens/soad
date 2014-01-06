@@ -61,8 +61,24 @@
 					</div> <!-- / form -->
 					
 				</div> <!-- /content -->
-				<a href="#" class="btn turquoise" id="btn-abrir-avaliacao">Abrir avaliação</a>
+				<a href="#" class="btn fluid turquoise" id="btn-abrir-avaliacao">Abrir avaliação</a>
 			</div>
+		</div>
+	</div>
+
+	<div class="six wide column box" id="cadastrar-perguntas">
+		<div class="box-header">Cadastrar Pergunta</div>
+		<div class="box-content">
+			<div class="ui stacked segment"></div>
+		</div>
+	</div>
+
+	div.
+
+	<div class="five wide column box" id="cadastrar-perguntas">
+		<div class="box-header">Perguntas disponíveis</div>
+		<div class="box-content">
+			<div class="ui stacked segment"></div>
 		</div>
 	</div>
 
@@ -94,7 +110,7 @@
 							</div>
 						</div>
 						<div class="ui bottom attached label center">
-							<a href="#" class="popup" data-content="Editar" data-variation="small" data-position="bottom center"><i class="circular pencil icon large"></i></a>
+							<a href="javascript:void(0)" onclick="javascript:editarAvaliacao({{$avaliacao['id']}})" class="popup" data-content="Editar" data-variation="small" data-position="bottom center"><i class="circular pencil icon large"></i></a>
 							<a href="#" class="popup" data-content="Visualizar" data-variation="small" avaliações" data-position="bottom center"><i class="circular comment icon large"></i></a>
 						</div>		
 					</div>
@@ -104,5 +120,63 @@
 		</div>
 	</div>		
 
+</div>
+<div class="ui modal">
+	<i class="close icon"></i>
+	<div class="header">
+    	Editar avaliação
+  	</div>
+  	<div class="content">
+    	<div class="left" style="width:200px">
+      		<form action="" class="ui form" id="form-editar-avaliacao">
+				<div class="field">
+					<label>Modulo: </label>
+					<div class="ui fluid selection dropdown" id="update-modulo">
+						<div class="text">1</div>
+						<i class="dropdown icon"></i>
+						<div class="menu">
+							<div class="item" data-value="1">1</div>
+							<div class="item" data-value="2">2</div>
+							<div class="item" data-value="3">3</div>
+						</div>
+					
+					</div> <!-- / selection -->
+				</div>
+
+				<div class="field">
+					<label>Turma: </label>
+					<div class="ui fluid selection dropdown" id="update-turma">
+						<div class="text">1</div>
+						<i class="dropdown icon"></i>
+						<div class="menu">
+						</div>
+					
+					</div> <!-- / selection -->
+				</div>
+
+				<div class="field">
+					<label>Início: </label>
+					<div class="ui icon input">
+						<input type="text" name="inicio" id="update-inicio">
+						<i class="calendar icon"></i>
+					</div>
+				</div>
+
+				<div class="field">
+					<label>Termino: </label>
+					<div class="ui icon input">
+						<input type="text" name="termino" id="update-termino">
+						<i class="calendar icon"></i>
+					</div>
+				</div>
+      		</form>
+    	</div>
+    	<div class="right">
+    		<div class="ui medium header">Perguntas</div>
+    	</div>
+  	</div>
+	<div class="actions" style="margin:1em 0">
+    	<a href="#" class="btn emerald">Salvar</a>
+    </div>
 </div>
 @stop

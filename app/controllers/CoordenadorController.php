@@ -69,6 +69,7 @@ class CoordenadorController extends BaseController
 				// percorre as avaliacaoes cadastradas para a turma atual
 				foreach ($turma->avaliacoes as $avaliacao) {
 					$avaliacoes[] = array(
+						"id"=>$avaliacao->id,
 						"curso"=>$curso->curso,
 						"turno"=>$turma->turno,
 						"modulo"=>$avaliacao->modulo,
@@ -82,5 +83,16 @@ class CoordenadorController extends BaseController
 		}
 
 		return $avaliacoes;
+	}
+
+	public function getInfoavaliacao()
+	{
+		$id = $_GET["avaliacao"];
+		$avaliacao = array(
+			"info"=>Avaliacao::find($id)->toArray(),
+			"perguntas"=>""
+		);
+
+		return $avaliacao;
 	}
 }

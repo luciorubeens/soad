@@ -222,9 +222,7 @@ a.ativo > i, #menu-lateral > ul > li > a:hover > i {
 }
 
 .btn {
-	display: block;
-	background-color: #A6986D;
-
+	background-color: #aaa;
 	-webkit-box-shadow: inset 0 0 5em rgba(0,0,0,0.15),inset 0 -.15em 0 rgba(0,0,0,0.2),0 .15em 0 rgba(0,0,0,0.075);
 	-moz-box-shadow: inset 0 0 5em rgba(0,0,0,0.15),inset 0 -.15em 0 rgba(0,0,0,0.2),0 .15em 0 rgba(0,0,0,0.075);
 	-ms-box-shadow: inset 0 0 5em rgba(0,0,0,0.15),inset 0 -.15em 0 rgba(0,0,0,0.2),0 .15em 0 rgba(0,0,0,0.075);
@@ -249,10 +247,18 @@ a.ativo > i, #menu-lateral > ul > li > a:hover > i {
 	font-weight: 600;
 }
 
+.btn.fluid {
+	display: block;
+}
+
 .btn.large {
 	font-size: 1.4em;
 }
 
+.btn.silver {
+	color:#444;
+	background-color: #eee;
+}
 .btn.turquoise {
 	background-color: rgb(22, 160, 133); 
 }
@@ -312,4 +318,9 @@ a.ativo > i, #menu-lateral > ul > li > a:hover > i {
 #avaliacoes-criadas .attached a {
 	text-decoration: none;
 	color:#222;
+}
+
+#form-editar-avaliacao {
+	width:100%;
+	font-size: 13pt;
 }

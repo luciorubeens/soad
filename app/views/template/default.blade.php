@@ -44,8 +44,9 @@
 			</div>
 		</div>
 </body>
-<!-- <script src="//code.jquery.com/jquery-1.10.2.min.js"></script> -->
-<script src="{{ asset('/javascript/jquery-1.10.1.min.js') }} "></script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<!-- <script src="{{ asset('/javascript/jquery-1.10.1.min.js') }} "></script> -->
 <script src="{{ asset('/javascript/semantic.min.js') }} "></script>
+<script>var url = "http://localhost:8000/"</script>
 <script src="{{ asset('/javascript/soad.js') }} "></script>
 </html>
