@@ -4,9 +4,9 @@ Projeto em fase de desenvolvimento para o atual processo de avaliação de docen
 
 ## Ferramentas
 
-	- <a href="http://laravel.com/">Laravel 4.1</a> - Framework PHP 
-	- <a href="http://semantic-ui.com/">Semantic UI</a> - Framework Front End
-	- <a href="http://jquery.com/">jQuery</a> - Biblioteca JavaScript
+<a href="http://laravel.com/">Laravel 4.1</a> - Framework PHP 
+<a href="http://semantic-ui.com/">Semantic UI</a> - Framework Front End
+<a href="http://jquery.com/">jQuery</a> - Biblioteca JavaScript
 
 ## Funcionalidades
 
