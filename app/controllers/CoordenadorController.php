@@ -36,9 +36,10 @@ class CoordenadorController extends BaseController
 	{
 		$avaliacoes = $this->getAvaliacoesCriadas();
 		$cursos = Coordenador::find($this->id)->cursos;
+		$perguntas_disponiveis = $this->getPerguntasDisponiveis();
 		$pagina= "Avaliações";
 
-		return View::make('coordenador.avaliacao',compact('avaliacoes','cursos','pagina'));
+		return View::make('coordenador.avaliacao',compact('avaliacoes','cursos','pagina','perguntas_disponiveis'));
 	}
 
 	/**
@@ -94,5 +95,10 @@ class CoordenadorController extends BaseController
 		);
 
 		return $avaliacao;
+	}
+
+	private function getPerguntasDisponiveis()
+	{
+		return Pergunta::all()->toArray();
 	}
 }

@@ -324,3 +324,30 @@ a.ativo > i, #menu-lateral > ul > li > a:hover > i {
 	width:100%;
 	font-size: 13pt;
 }
+
+.lista-drag {
+	text-align: left;
+
+}
+.lista-drag > .item {
+	cursor: move!important;
+	padding:0.5em 0.7em!important;
+	border-left: 4px solid orange;
+}
+.lista-drag .item > .content {
+	color:#555;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.drop-box {
+	border:2px dashed #eee;
+	padding:1em;
+}
+
+.drop-box .title {
+	margin:0 auto;
+	font-size:14pt;
+	font-weight: 300;
+	color:#ccc;
+}

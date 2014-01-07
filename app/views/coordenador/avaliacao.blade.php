@@ -66,19 +66,38 @@
 		</div>
 	</div>
 
-	<div class="six wide column box" id="cadastrar-perguntas">
-		<div class="box-header">Cadastrar Pergunta</div>
+	<div class="six wide column box drag-drop" id="cadastrar-perguntas">
+		<div class="box-header">Anexar Pergunta 
+			<div class="ui label">
+  				<i class="tag icon"></i> 0
+			</div>
+		</div>
 		<div class="box-content">
-			<div class="ui stacked segment"></div>
+			<div class="ui stacked segment">
+				<div class="drop-box">
+					<div class="title">Arraste as perguntas do campo ao lado</div>
+				</div>
+				<div class="ui horizontal divider">ou</div>
+				<a href="#" class="btn silver fluid">Adicionar nova pergunta</a>
+			</div>
 		</div>
 	</div>
 
 	div.
 
-	<div class="five wide column box" id="cadastrar-perguntas">
+	<div class="five wide column box drag-drop" id="perguntas-disponiveis">
 		<div class="box-header">Perguntas disponíveis</div>
 		<div class="box-content">
-			<div class="ui stacked segment"></div>
+			<div class="ui stacked segment">
+				<div class="ui animated list lista-drag">
+					@foreach ($perguntas_disponiveis as $pergunta)
+					<div class="item">
+						<div class="content">{{$pergunta["pergunta"]}}</div>
+					</div>
+					@endforeach
+				</div>
+
+			</div>
 		</div>
 	</div>
 
